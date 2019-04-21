@@ -1,0 +1,8 @@
+C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\obj\Debug\ExcelTextToDxf.csprojAssemblyReference.cache
+C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\obj\Debug\ExcelTextToDxf.csproj.ResolveComReference.cache
+C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\obj\Debug\ExcelTextToDxf.csproj.CoreCompileInputs.cache
+C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\bin\Debug\ExcelTextToDxf.exe.config
+C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\bin\Debug\ExcelTextToDxf.exe
+C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\bin\Debug\ExcelTextToDxf.pdb
+C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\obj\Debug\ExcelTextToDxf.exe
+C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\obj\Debug\ExcelTextToDxf.pdb
