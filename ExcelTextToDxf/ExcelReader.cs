@@ -10,7 +10,7 @@ namespace ExcelTextToDxf
 {
     class ExcelReader
     {
-        public static void getExcelFile()
+        public void getExcelFile()
         {
             //Create COM Objects. Create a COM object for everything that is referenced
             Excel.Application xlApp = new Excel.Application();
