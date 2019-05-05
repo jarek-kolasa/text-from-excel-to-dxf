@@ -6,3 +6,6 @@ C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\bin\Debug\
 C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\bin\Debug\ExcelTextToDxf.pdb
 C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\obj\Debug\ExcelTextToDxf.exe
 C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\obj\Debug\ExcelTextToDxf.pdb
+C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\bin\Debug\netDxf.dll
+C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\bin\Debug\netDxf.xml
+C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\ExcelTextToDxf\obj\Debug\ExcelTextToDxf.csproj.CopyComplete
