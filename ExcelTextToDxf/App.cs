@@ -8,14 +8,14 @@ namespace ExcelTextToDxf
 {
     class App
     {
-
+       
         public static void Main(string[] args)
         {
             ExcelReader excel = new ExcelReader();
             excel.getExcelFile();
 
             DxfWriter dxf = new DxfWriter();
-            dxf.setDxfWriter();
+            dxf.dxfWriter();
         }
     }
 }
