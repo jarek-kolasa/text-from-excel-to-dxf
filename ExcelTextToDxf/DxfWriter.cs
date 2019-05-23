@@ -28,14 +28,23 @@ namespace ExcelTextToDxf
         Vector3 textLocation = new Vector3(0, 0, 0);
         Text text;
 
+        ExcelReader excelText;
+
+        int excelRow = 0;
+        int excelCol = 1;
+
         public void dxfWriter()
         {
             dxfDocument = new DxfDocument();
+
+            // object of ExcelReader
+            excelText = new ExcelReader();
+
             entity = new Line(new Vector2(5, 5), new Vector2(10, 5));
             //add an entity here
             dxfDocument.AddEntity(entity);
             // text
-            text = new Text("text", textLocation, 2.0);
+            text = new Text(excelText.GetChoosenCellValue(excelRow, excelCol), textLocation, 2.0);
             Layer layer = new Layer("text");
             text.Layer = layer;
             text.Alignment = TextAlignment.BottomLeft;

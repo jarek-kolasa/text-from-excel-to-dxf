@@ -10,6 +10,8 @@ namespace ExcelTextToDxf
 {
     class ExcelReader
     {
+        string[,] textValues;
+
         public void getExcelFile()
         {
             //Create COM Objects. Create a COM object for everything that is referenced
@@ -21,6 +23,8 @@ namespace ExcelTextToDxf
             int rowCount = xlRange.Rows.Count;
             int colCount = xlRange.Columns.Count;
 
+             textValues = new string[rowCount, colCount];
+
             //iterate over the rows and columns and print to the console as it appears in the file
             //excel is not zero based!!
             for (int i = 1; i <= rowCount; i++)
@@ -30,17 +34,20 @@ namespace ExcelTextToDxf
                     // new line
                     if (j == 1)
                     {
-                        Console.Write("\r\n");
+                        Console.Write("\r\n"+".");
                     }
 
                     //write the value to the console
                     if (xlRange.Cells[i, j] != null && xlRange.Cells[i, j].Value2 != null)
                     {
-                        Console.Write(xlRange.Cells[i, j].Value2.ToString() + "\t");
+                        textValues[i-1, j-1] = xlRange.Cells[i, j].Value2.ToString();
+                        // Console.Write(textValues[i-1, j-1]);
                     }
                 }
             }
-            Console.ReadLine();
+
+
+            // Console.ReadLine();
 
 
             //cleanup
@@ -64,5 +71,12 @@ namespace ExcelTextToDxf
             Marshal.ReleaseComObject(xlApp);
         }
 
+
+        public string GetChoosenCellValue(int row, int col)
+        {
+            getExcelFile();
+
+            return textValues[row, col];
+        }
     }
 }
