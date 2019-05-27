@@ -16,22 +16,24 @@ namespace ExcelTextToDxf
     {
 
         // dxf filename
-        string [] filesPath = Directory.GetFiles(@"C:\Users\jkola\Desktop\Programowanie\C#\", "*.dxf");
+        private string [] filesPath = Directory.GetFiles(@"C:\Users\jkola\Desktop\Programowanie\C#\", "*.dxf");
 
         // by default it will create an AutoCad2000 DXF version
-        DxfDocument dxfDocument;
+        private DxfDocument dxfDocument;
 
         // an entity
-        Line entity;
+        private Line entity;
 
         // text
-        Vector3 textLocation = new Vector3(0, 0, 0);
-        Text text;
+        private Vector3 textLocation = new Vector3(0, 0, 0);
+        private Text text;
 
-        ExcelReader excelText;
+        private ExcelReader excelText;
 
-        int excelRow = 0;
-        int excelCol = 1;
+        private int excelRow = 0;
+        private int excelCol = 1;
+
+
 
         public void dxfWriter()
         {

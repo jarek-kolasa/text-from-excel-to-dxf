@@ -10,18 +10,28 @@ namespace ExcelTextToDxf
 {
     class ExcelReader
     {
-        string[,] textValues;
+        private string path = @"C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\test.xlsx";
 
-        public void getExcelFile()
+        private Excel.Application xlApp;
+        private Excel.Workbook xlWorkbook;
+        private Excel._Worksheet xlWorksheet;
+        private Excel.Range xlRange;
+
+        private int rowCount;
+        private int colCount;
+
+        private string[,] textValues;
+
+        protected void GetExcelFile()
         {
             //Create COM Objects. Create a COM object for everything that is referenced
-            Excel.Application xlApp = new Excel.Application();
-            Excel.Workbook xlWorkbook = xlApp.Workbooks.Open(@"C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\test.xlsx");
-            Excel._Worksheet xlWorksheet = xlWorkbook.Sheets[1];
-            Excel.Range xlRange = xlWorksheet.UsedRange;
+            xlApp = new Excel.Application();
+            xlWorkbook = xlApp.Workbooks.Open(path);
+            xlWorksheet = xlWorkbook.Sheets[1];
+            xlRange = xlWorksheet.UsedRange;
 
-            int rowCount = xlRange.Rows.Count;
-            int colCount = xlRange.Columns.Count;
+            rowCount = xlRange.Rows.Count;
+            colCount = xlRange.Columns.Count;
 
              textValues = new string[rowCount, colCount];
 
@@ -34,7 +44,7 @@ namespace ExcelTextToDxf
                     // new line
                     if (j == 1)
                     {
-                        Console.Write("\r\n"+".");
+                        Console.Write("."+ "\r\n");
                     }
 
                     //write the value to the console
@@ -45,10 +55,6 @@ namespace ExcelTextToDxf
                     }
                 }
             }
-
-
-            // Console.ReadLine();
-
 
             //cleanup
             GC.Collect();
@@ -74,7 +80,7 @@ namespace ExcelTextToDxf
 
         public string GetChoosenCellValue(int row, int col)
         {
-            getExcelFile();
+            GetExcelFile();
 
             return textValues[row, col];
         }

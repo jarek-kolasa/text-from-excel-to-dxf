@@ -11,9 +11,6 @@ namespace ExcelTextToDxf
        
         public static void Main(string[] args)
         {
-            ExcelReader excel = new ExcelReader();
-            excel.getExcelFile();
-
             DxfWriter dxf = new DxfWriter();
             dxf.dxfWriter();
         }
