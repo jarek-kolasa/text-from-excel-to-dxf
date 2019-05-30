@@ -10,7 +10,7 @@ namespace ExcelTextToDxf
 {
     class ExcelReader
     {
-        private string path = @"C:\Users\jkola\Desktop\Programowanie\C#\ExcelTextToCad\test.xlsx";
+        private string path;
 
         private Excel.Application xlApp;
         private Excel.Workbook xlWorkbook;
@@ -22,7 +22,7 @@ namespace ExcelTextToDxf
 
         private string[,] textValues;
 
-        protected void GetExcelFile()
+        protected void GetExcelFile(string path)
         {
             //Create COM Objects. Create a COM object for everything that is referenced
             xlApp = new Excel.Application();
@@ -80,7 +80,8 @@ namespace ExcelTextToDxf
 
         public string GetChoosenCellValue(int row, int col)
         {
-            GetExcelFile();
+            Console.Write("Podaj sciezke do pliku excel (np. C:\\Users\\user\\Desktop\\plikExcel.xlsx): ");
+            GetExcelFile(Console.ReadLine());
 
             return textValues[row, col];
         }

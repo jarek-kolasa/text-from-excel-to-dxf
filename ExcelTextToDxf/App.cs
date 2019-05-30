@@ -12,7 +12,7 @@ namespace ExcelTextToDxf
         public static void Main(string[] args)
         {
             DxfWriter dxf = new DxfWriter();
-            dxf.dxfWriter();
+            dxf.DxfWriterApp();
         }
     }
 }
